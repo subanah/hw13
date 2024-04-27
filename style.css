@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Ubuntu", sans-serif;
+}
+ul , ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --primary-clr:#0f2f44;
+    --cmn-font:"Ubuntu", sans-serif;
+}
+
+
+.row{
+    display: flex;
+}
+/* header */
+header{
+    background-color: var(--primary-clr);
+    color: #fff;
+}
+.container{
+    margin: auto;
+    width: 1170px;
+}
+
+header span{
+    padding: 19px 0;
+    display: inline-block;
+    line-height: 0;
+}
+header .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* header end */
+/* nav */
+nav .row{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+   
+}
+nav ul li{
+    display: inline-block;
+    
+
+}
+nav ul li a{
+   
+    display: inline-block;
+    padding: 40px 20px;
+    color: black;
+    font-size: 16px;
+
+}
+nav ul li button{
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #e2e2e2;
+    background-color: transparent;
+    color: #999999;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+nav ul .active{
+    background-color: #fff9e6;
+    color: #ffcc66;
+}
+nav ul li a:hover{
+    color: #ffcc66;
+}
+/* nav end */
+/* BANNER */
+#banner{
+    background-image: url(./img/bgimg1.png);
+    height: 584px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+#banner .row{
+    align-items: center;
+   height: 584px;
+   padding-top: 137px;
+   
+}
+#banner .banner-contains{
+    width: 470px;
+}
+#banner .banner-contains h4{
+    
+        font-family: "Abril Fatface", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 50px;
+      
+      
+}
+#banner .banner-contains h1{
+    
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+  
+  
+}
+#banner .banner-contains p{
+    
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 23px;
+    color: #8484bf;
+  
+  
+}
+#banner .banner-contains span{
+    line-height: 24px;
+    font-size: 14px;
+
+}
+#banner .btn-group{
+   height: 42px;
+   display: flex;
+   margin-top: 40px;
+}
+#banner .banner-contains .btn-group a{
+    background-color: #8484bf;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 20px;    
+}
+/* BANNER END */
+/* ABOUT */
+#about{
+    padding: 30px 0;
+}
+
+#about .row{
+    
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+
+#about .about-contains{
+    width: 570px;
+}
+
+#about .about-contains h6{
+    font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+}
+#about .about-contains h1{
+    font-family: "Abril Fatface", serif;
+    font-size: 32px;
+}
+#about .about-contains p{
+    padding: 30px 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+#about .about-contains ul{
+    margin-left: 20px;
+    padding: 20px;
+}
+#about .about-contains button{
+    
+    display: inline-block;
+    margin-top: 40px;
+    
+   
+   
+ }  
+ #about .about-contains button{
+  
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-right: 20px;  
+    box-shadow: 10px 10px 30px;  
+    
+  
+    
+ }
+ 
+ #about .about-contains button:hover{
+    background-color: #ffc712;
+ }
+  
+
+
+
+/* ABOUT END */
+/* Service */
+#service{
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+#service .service-header h4{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+}
+#service .service-header h1{
+    font-family: "Abril Fatface", serif;
+    font-size: 32px;
+    text-align: center;
+}
+#service .service-box{
+    width: calc(33.33% - 30px);
+    align-items: center;
+    display: flex;
+    background-color: #eeee;
+    margin: 0 15px; 
+    position: relative;
+}
+#service .service-box img{
+    padding: 0 20px;
+   
+}
+
+#service .container{
+    padding: 20px 15px 20px 20px;
+}
+#service .service-box .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #0f2f44;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+   transition: 0.5s;
+   
+    
+
+}
+#service .service-box:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+    
+
+}
+#service .service-box .move-sign{
+    position:absolute;
+    bottom: -20px;
+    left: -20px;
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: 0.3s;
+
+}
+#service .service-box:hover .move-sign{
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+/* Service End */
+/* portfolio */
+
+#portfolio .portfolio-header h4{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+}
+#portfolio .portfolio-header h1{
+    font-family: "Abril Fatface", serif;
+    font-size: 32px;
+    text-align: center;
+    
+}
+#portfolio .portfolio-header {
+    padding: 63px 0;
+}
+#portfolio .portfolio-box{
+    width: calc(33.33% - 60px);
+    margin: 0 30px;
+    position: relative;
+}
+#portfolio .portfolio-box img{
+    display: block;
+    width: 100%;
+    
+}
+#portfolio .portfolio-box .overlay-box h4{
+    padding: 30px 0;
+    text-align: center;
+    background-color: #fff;
+}
+#portfolio .portfolio-box .overlay-box{
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s;
+}
+#portfolio .portfolio-box .scroll{
+    position: absolute;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#portfolio .portfolio-box .scroll2{
+    position: absolute;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#portfolio .portfolio-box:hover .overlay-box{
+    opacity: 1;
+    bottom: 0;
+}
+#portfolio  button{
+   background-color: #ffc712;
+   justify-content: center;
+   text-align: center;
+   display: flex;
+   margin: auto;
+   padding: 15px 40px;
+   border-radius: 5px;  
+   box-shadow: 10px 10px 30px;  
+   margin-top: 65px;
+   margin-bottom: 65px;
+
+}
+
+/* portfolio End */
+/* Testimonial */
+#testimonial {
+    background-color: #f5f5f5;
+}
+#testimonial .testimonial-header{
+    padding: 10px 0;
+}
+#testimonial .testimonial-header h4{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+}
+#testimonial .testimonial-header h1{
+    font-family: "Abril Fatface", serif;
+    font-size: 32px;
+    text-align: center;
+}
+#testimonial .testimonial-box{
+    width: calc(50% - 30px);
+    align-items: center;
+    display: flex;
+    background-color: #e9e9e9;
+    margin: 15px; 
+    position: relative;
+}
+#testimonial .testimonial-box .scroll{
+    position: absolute;
+    left: -64px;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#testimonial .testimonial-box .scroll2{
+    position: absolute;
+    right: -36px;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#testimonial .container{
+    padding: 20px 15px 20px 20px;
+  
+}
+/* Testimonial End */
+/* blogs */
+#blogs{
+    display: flex;
+}
+#blogs .blog-header {
+    padding: 10px 0;
+    margin-top: 63px;
+    margin-bottom: 50px;
+}
+#blogs .blog-header h4{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+}
+#blogs .blog-header h1{
+    font-family: "Abril Fatface", serif;
+    font-size: 32px;
+    text-align: center;
+}
+#blogs .blog-box{
+    width: calc(33.33% - 60px);
+    margin: 0 30px;
+    position: relative;
+}
+#blogs .blog-box img{
+    display: block;
+    width: 100%;
+    padding: 15px 15px 150px 15px;
+    background-color: #f5f5f5;
+}
+#blogs .blog-box .overlay-blog{
+    position: absolute;
+    color: black;
+    bottom: 30px;
+    padding: 15px 15px;
+    width: 100%;
+    
+}
+#blogs .blog-box:hover img{
+    background-color: #0f2f44;
+    transition: 0.5s;  
+}
+#blogs button{
+    background-color: #ffc712;
+   justify-content: center;
+   text-align: center;
+   display: flex;
+   margin: auto;
+   padding: 15px 40px;
+   border-radius: 5px;  
+   box-shadow: 10px 10px 30px;  
+   margin-top: 65px;
+   margin-bottom: 65px;
+
+}
+/* blogs end */
